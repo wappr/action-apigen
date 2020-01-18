@@ -34,7 +34,7 @@ cd apigen
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
 
 echo '{ "require" : { "apigen/apigen" : "4.1.2" } }' >>composer.json
-composer install --prefer-source --no-interaction --dev
+composer install --prefer-source --no-interaction --dev --no-suggest
 chmod +x ./vendor/bin/apigen
 
 echo "Running ApiGen"
@@ -42,7 +42,7 @@ echo "Running ApiGen"
 
 cd $GITHUB_WORKSPACE
 # Custom Command Option
-if [[ ! -z "$AFTER_CMD" ]]; then
+if [ ! -z "$AFTER_CMD" ]; then
   echo "Running AFTER_CMD"
   eval "$AFTER_CMD"
 fi
