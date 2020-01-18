@@ -5,12 +5,12 @@ PUSH_TO_BRANCH="$INPUT_PUSH_TO_BRANCH"
 BEFORE_CMD="$INPUT_BEFORE_CMD"
 AFTER_CMD="$INPUT_AFTER_CMD"
 
-if [[ -z "$GITHUB_TOKEN" ]]; then
+if [ -z "$GITHUB_TOKEN" ]; then
   echo "Set the GITHUB_TOKEN env variable"
   exit 1
 fi
 
-if [[ -z "$PUSH_TO_BRANCH" ]]; then
+if [ -z "$PUSH_TO_BRANCH" ]; then
   echo "Set the PUSH_TO_BRANCH Variable"
   exit 1
 fi
@@ -19,7 +19,7 @@ fi
 git config --global user.email "githubactionbot+apigen@gmail.com" && git config --global user.name "ApiGen Github Bot"
 
 # Custom Command Option
-if [[ ! -z "$BEFORE_CMD" ]]; then
+if [ ! -z "$BEFORE_CMD" ]; then
   echo "Running BEFORE_CMD"
   eval "$BEFORE_CMD"
 fi
