@@ -38,6 +38,7 @@ composer install --prefer-source --no-interaction --dev --no-suggest
 chmod +x ./vendor/bin/apigen
 
 echo "Running ApiGen"
+echo $GITHUB_WORKSPACE
 ./vendor/bin/apigen generate -s $GITHUB_WORKSPACE --destination ../apigen_ouput
 
 cd $GITHUB_WORKSPACE
