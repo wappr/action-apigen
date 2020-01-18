@@ -40,7 +40,7 @@ chmod +x ./vendor/bin/apigen
 echo "Running ApiGen"
 echo $GITHUB_WORKSPACE
 ls -al $GITHUB_WORKSPACE
-./vendor/bin/apigen generate -s $GITHUB_WORKSPACE --destination ../apigen_ouput
+./vendor/bin/apigen generate --debug -s $GITHUB_WORKSPACE --destination ../apigen_ouput
 
 cd $GITHUB_WORKSPACE
 # Custom Command Option
