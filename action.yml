@@ -1,6 +1,6 @@
-name: 'ApiGen Docs'
+name: 'ApiGennie'
 description: 'Github Action To Generate Code Docs Website For PHP Using ApiGen'
-author: 'varunsridharan'
+author: 'levidurfee'
 branding:
   icon: 'hard-drive'
   color: 'green'
